@@ -4,6 +4,7 @@ export type CategoriaFinanceiro = 'fixa' | 'variavel'
 export type TipoFinanceiro =
   | 'salario' | 'comissao' | 'imposto' | 'compra_grama'
   | 'frete' | 'plantio' | 'outros_fixo' | 'outros_variavel'
+export type Status = 'Ativo' | 'Inativo'
 
 export interface Profile {
   id: string
@@ -17,9 +18,13 @@ export interface Profile {
 export interface Cliente {
   id: string
   nome: string
-  cidade: string
-  estado: string
-  criado_em: string
+  cidade?: string
+  estado?: string
+  criado_em?: string
+  email: string
+  empresa: string
+  status: Status
+  cadastro: string
 }
 
 export interface Carregamento {
@@ -75,4 +80,12 @@ export interface VendedorMetrics {
   comissao: number
   percentual_meta: number
   nivel_meta: string
+}
+
+export interface Negocio {
+  id: string
+  cliente: string
+  valor: number
+  responsavel: string
+  estagio: string
 }
