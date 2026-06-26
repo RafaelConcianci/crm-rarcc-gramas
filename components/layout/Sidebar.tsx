@@ -46,7 +46,7 @@ export function Sidebar() {
               className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
                 active
                   ? "bg-white text-green-700"
-                  : "text-white hover:bg-green-700"
+                  : "text-white hover:bg-green-500"
               }`}
             >
               {item.icon}
